@@ -1,5 +1,5 @@
 package CatalystX::DebugFilter;
-our $VERSION = '0.01';
+$CatalystX::DebugFilter::VERSION = '0.02';
 
 # ABSTRACT: Provides configurable filtering of data that is logged to the debug logs (and error screen)
 use Moose::Role;
@@ -149,7 +149,7 @@ CatalystX::DebugFilter - Provides configurable filtering of data that is logged 
 
 =head1 VERSION
 
-version 0.01
+version 0.02
 
 =head1 SYNOPSIS
 
@@ -192,14 +192,6 @@ version 0.01
 This module provides a Moose role that will filter certain elements of
 a request/response/stash before they are logged to the debug logs (or
 the error screen).
-
-=head1 NAME
-
-=head1 VERSION
-
-version 0.01
-CatalystX::DebugFilter - Provides configurable filtering of data that
-is logged to the debug logs (and error screen)
 
 =head1 METHODS
 
@@ -297,18 +289,6 @@ the value to the callback).
 =item * L<CatalystX::Debug::ResponseHeaders>
 
 =back
-
-=head1 AUTHOR
-
-Brian Phillips C<< bphillips at cpan dot org >>
-
-=head1 COPYRIGHT & LICENSE
-
-Copyright 2010 the above author(s).
-
-This sofware is free software, and is licensed under the same terms as perl itself.
-
-=cut
 
 =head1 AUTHOR
 

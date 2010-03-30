@@ -3,7 +3,7 @@ NAME
     logged to the debug logs (and error screen)
 
 VERSION
-    version 0.01
+    version 0.02
 
 SYNOPSIS
         package MyApp;
@@ -44,11 +44,6 @@ DESCRIPTION
     This module provides a Moose role that will filter certain elements of a
     request/response/stash before they are logged to the debug logs (or the
     error screen).
-
-NAME
-VERSION
-    version 0.01 CatalystX::DebugFilter - Provides configurable filtering of
-    data that is logged to the debug logs (and error screen)
 
 METHODS
   dump_these
@@ -126,15 +121,6 @@ SEE ALSO
     *   CatalystX::Debug::RequestHeaders
 
     *   CatalystX::Debug::ResponseHeaders
-
-AUTHOR
-    Brian Phillips "bphillips at cpan dot org"
-
-COPYRIGHT & LICENSE
-    Copyright 2010 the above author(s).
-
-    This sofware is free software, and is licensed under the same terms as
-    perl itself.
 
 AUTHOR
       Brian Phillips <bphillips@cpan.org>

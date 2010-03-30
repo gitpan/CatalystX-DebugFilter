@@ -2,18 +2,29 @@
 abstract: 'Provides configurable filtering of data that is logged to the debug logs (and error screen)'
 author:
   - 'Brian Phillips <bphillips@cpan.org>'
-build_requires: {}
+build_requires:
+  Catalyst: 0
+  Catalyst::Controller: 0
+  Catalyst::Log: 0
+  Catalyst::ScriptRunner: 0
+  Catalyst::Test: 0
+  FindBin: 0
+  Moose: 0
+  Test::More: 0
+  Test::Pod: 1.14
+  Test::Pod::Coverage: 1.04
+  Test::WWW::Mechanize::Catalyst: 0
+  ok: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.11
-generated_by: 'Dist::Zilla version 1.100711'
+  ExtUtils::MakeMaker: 6.31
+generated_by: 'Dist::Zilla version 2.100880'
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
 name: CatalystX-DebugFilter
 requires:
-  Catalyst::Runtime: 5.80022
   Clone: 0
-  Moose: 0
+  Moose::Role: 0
   namespace::autoclean: 0
-version: 0.01
+version: 0.02
