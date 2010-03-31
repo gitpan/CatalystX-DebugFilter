@@ -9,6 +9,7 @@ build_requires:
   Catalyst::ScriptRunner: 0
   Catalyst::Test: 0
   FindBin: 0
+  Module::Build: 0.3601
   Moose: 0
   Test::More: 0
   Test::Pod: 1.14
@@ -16,7 +17,7 @@ build_requires:
   Test::WWW::Mechanize::Catalyst: 0
   ok: 0
 configure_requires:
-  ExtUtils::MakeMaker: 6.31
+  Module::Build: 0.3601
 generated_by: 'Dist::Zilla version 2.100880'
 license: perl
 meta-spec:
@@ -27,4 +28,6 @@ requires:
   Clone: 0
   Moose::Role: 0
   namespace::autoclean: 0
-version: 0.02
+resources:
+  repository: http://github.com/brianphillips/CatalystX-DebugFilter
+version: 0.03

@@ -1,5 +1,5 @@
 package CatalystX::DebugFilter;
-$CatalystX::DebugFilter::VERSION = '0.02';
+$CatalystX::DebugFilter::VERSION = '0.03';
 
 # ABSTRACT: Provides configurable filtering of data that is logged to the debug logs (and error screen)
 use Moose::Role;
@@ -149,7 +149,7 @@ CatalystX::DebugFilter - Provides configurable filtering of data that is logged 
 
 =head1 VERSION
 
-version 0.02
+version 0.03
 
 =head1 SYNOPSIS
 
