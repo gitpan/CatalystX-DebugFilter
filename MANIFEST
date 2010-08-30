@@ -4,11 +4,6 @@ MANIFEST
 META.yml
 README
 dist.ini
-extlib/lib/perl5/x86_64-linux-gnu-thread-multi/Clone/Fast.pm
-extlib/lib/perl5/x86_64-linux-gnu-thread-multi/auto/Clone/Fast/Fast.bs
-extlib/lib/perl5/x86_64-linux-gnu-thread-multi/auto/Clone/Fast/Fast.so
-extlib/lib/perl5/x86_64-linux-gnu-thread-multi/perllocal.pod
-extlib/man/man3/Clone::Fast.3pm
 lib/CatalystX/DebugFilter.pm
 t/00-load.t
 t/author/pod-coverage.t

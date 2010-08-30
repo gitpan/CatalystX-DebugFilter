@@ -31,4 +31,4 @@ requires:
   namespace::autoclean: 0
 resources:
   repository: http://github.com/brianphillips/CatalystX-DebugFilter
-version: 0.04
+version: 0.05
