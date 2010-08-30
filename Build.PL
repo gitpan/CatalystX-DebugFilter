@@ -4,40 +4,43 @@ use warnings;
 
 use Module::Build 0.3601;
 
+
 my %module_build_args = (
-                       'dist_abstract' => 'Provides configurable filtering of data that is logged to the debug logs (and error screen)',
-                       'script_files' => [],
-                       'license' => 'perl',
-                       'build_requires' => {
-                                             'Test::Pod::Coverage' => '1.04',
-                                             'FindBin' => '0',
-                                             'Catalyst::Log' => '0',
-                                             'Test::Pod' => '1.14',
-                                             'ok' => '0',
-                                             'Test::More' => '0',
-                                             'Catalyst::ScriptRunner' => '0',
-                                             'Catalyst::Controller' => '0',
-                                             'Catalyst' => '0',
-                                             'Module::Build' => '0.3601',
-                                             'Test::WWW::Mechanize::Catalyst' => '0',
-                                             'Catalyst::Test' => '0',
-                                             'Moose' => '0'
-                                           },
-                       'dist_name' => 'CatalystX-DebugFilter',
-                       'dist_author' => [
-                                          'Brian Phillips <bphillips@cpan.org>'
-                                        ],
-                       'module_name' => 'CatalystX::DebugFilter',
-                       'requires' => {
-                                       'Moose::Role' => '0',
-                                       'namespace::autoclean' => '0',
-                                       'Clone' => '0'
-                                     },
-                       'configure_requires' => {
-                                                 'Module::Build' => '0.3601'
-                                               },
-                       'dist_version' => '0.03'
-                     );
+  'build_requires' => {
+    'Catalyst' => '0',
+    'Catalyst::Controller' => '0',
+    'Catalyst::Log' => '0',
+    'Catalyst::ScriptRunner' => '0',
+    'Catalyst::Test' => '0',
+    'FindBin' => '0',
+    'Module::Build' => '0.3601',
+    'Moose' => '0',
+    'Test::More' => '0',
+    'Test::Pod' => '1.14',
+    'Test::Pod::Coverage' => '1.04',
+    'Test::WWW::Mechanize::Catalyst' => '0',
+    'ok' => '0'
+  },
+  'configure_requires' => {
+    'Module::Build' => '0.3601'
+  },
+  'dist_abstract' => 'Provides configurable filtering of data that is logged to the debug logs (and error screen)',
+  'dist_author' => [
+    'Brian Phillips <bphillips@cpan.org>'
+  ],
+  'dist_name' => 'CatalystX-DebugFilter',
+  'dist_version' => '0.04',
+  'license' => 'perl',
+  'module_name' => 'CatalystX::DebugFilter',
+  'recommends' => {},
+  'recursive_test_files' => 1,
+  'requires' => {
+    'Clone::Fast' => '0',
+    'Moose::Role' => '0',
+    'namespace::autoclean' => '0'
+  },
+  'script_files' => []
+);
 
 
 my $build = Module::Build->new(%module_build_args);
