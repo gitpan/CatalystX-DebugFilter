@@ -29,13 +29,13 @@ my %module_build_args = (
     'Brian Phillips <bphillips@cpan.org>'
   ],
   'dist_name' => 'CatalystX-DebugFilter',
-  'dist_version' => '0.05',
+  'dist_version' => '0.06',
   'license' => 'perl',
   'module_name' => 'CatalystX::DebugFilter',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Clone::Fast' => '0',
+    'Clone::PP' => '0',
     'Moose::Role' => '0',
     'namespace::autoclean' => '0'
   },

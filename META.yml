@@ -26,9 +26,9 @@ meta-spec:
   version: 1.4
 name: CatalystX-DebugFilter
 requires:
-  Clone::Fast: 0
+  Clone::PP: 0
   Moose::Role: 0
   namespace::autoclean: 0
 resources:
   repository: http://github.com/brianphillips/CatalystX-DebugFilter
-version: 0.05
+version: 0.06
