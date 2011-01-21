@@ -13,6 +13,7 @@ my %module_build_args = (
     'Catalyst::ScriptRunner' => '0',
     'Catalyst::Test' => '0',
     'FindBin' => '0',
+    'HTTP::Request::Common' => '0',
     'Module::Build' => '0.3601',
     'Moose' => '0',
     'Test::More' => '0',
@@ -29,14 +30,14 @@ my %module_build_args = (
     'Brian Phillips <bphillips@cpan.org>'
   ],
   'dist_name' => 'CatalystX-DebugFilter',
-  'dist_version' => '0.06',
+  'dist_version' => '0.07',
   'license' => 'perl',
   'module_name' => 'CatalystX::DebugFilter',
   'recommends' => {},
   'recursive_test_files' => 1,
   'requires' => {
-    'Clone::PP' => '0',
     'Moose::Role' => '0',
+    'Scalar::Util' => '0',
     'namespace::autoclean' => '0'
   },
   'script_files' => []

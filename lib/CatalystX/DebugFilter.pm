@@ -1,12 +1,12 @@
 package CatalystX::DebugFilter;
 BEGIN {
-  $CatalystX::DebugFilter::VERSION = '0.06';
+  $CatalystX::DebugFilter::VERSION = '0.07';
 }
 
 # ABSTRACT: Provides configurable filtering of data that is logged to the debug logs (and error screen)
 use Moose::Role;
 use namespace::autoclean;
-use Clone::PP qw(clone);
+use Scalar::Util qw(reftype blessed);
 requires('dump_these','log_request_headers','log_response_headers');
 our $CONFIG_KEY = __PACKAGE__;
 my %filters = (
@@ -23,7 +23,22 @@ around dump_these => sub {
             my ( $type, $obj ) = @$d;
             my $callback      = $filters{$type}  or next;
             my $filter_config = $config->{$type} or next;
-            my $copy          = clone($obj);
+            my $obj_type = reftype($obj);
+
+            # poor-man's shallow cloning, none of the Clone
+            # modules were problem-free...
+            my $copy;
+            if ( $obj_type eq 'HASH' ) {
+                $copy = {%$obj};
+            } elsif ( $obj_type eq 'ARRAY' ) {
+                $copy = [@$obj];
+            } else {
+                $copy = "$obj";    # not going to bother with anything else
+            }
+            if(ref $copy and my $obj_ref = blessed $obj){
+                bless $copy, $obj_ref;
+            }
+
             if ( $callback->( $filter_config, $copy ) ) {
                 $d->[1] = $copy;
             }
@@ -151,7 +166,7 @@ CatalystX::DebugFilter - Provides configurable filtering of data that is logged 
 
 =head1 VERSION
 
-version 0.06
+version 0.07
 
 =head1 SYNOPSIS
 
@@ -298,7 +313,7 @@ the value to the callback).
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2010 by Brian Phillips.
+This software is copyright (c) 2011 by Brian Phillips.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
