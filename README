@@ -3,7 +3,7 @@ NAME
     logged to the debug logs (and error screen)
 
 VERSION
-    version 0.07
+    version 0.08
 
 SYNOPSIS
         package MyApp;

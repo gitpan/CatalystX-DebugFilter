@@ -30,7 +30,7 @@ my %module_build_args = (
     'Brian Phillips <bphillips@cpan.org>'
   ],
   'dist_name' => 'CatalystX-DebugFilter',
-  'dist_version' => '0.07',
+  'dist_version' => '0.08',
   'license' => 'perl',
   'module_name' => 'CatalystX::DebugFilter',
   'recommends' => {},
