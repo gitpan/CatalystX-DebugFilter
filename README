@@ -3,7 +3,7 @@ NAME
     logged to the debug logs (and error screen)
 
 VERSION
-    version 0.08
+    version 0.09
 
 SYNOPSIS
         package MyApp;
@@ -36,14 +36,17 @@ SYNOPSIS
                             return undef;
                         }
                     },
-                ]
+                ],
+                Session => [
+                    'secret_session_key'
+                ],
             }
         );
 
 DESCRIPTION
     This module provides a Moose role that will filter certain elements of a
-    request/response/stash before they are logged to the debug logs (or the
-    error screen).
+    request/response/stash/session before they are logged to the debug logs
+    (or the error screen).
 
 METHODS
   dump_these
@@ -112,10 +115,10 @@ CAVEATS
     an object that contains that password and store it in the stash, the
     password value may still appear on the error screen.
 
-    Also, the stash is only filtered at the top level. If you would like to
-    filter more extensively, you can use a filter callback to traverse the
-    stash, modifying whatever data you like (a copy is made before passing
-    the value to the callback).
+    Also, the stash and session are only filtered at the top level. If you
+    would like to filter more extensively, you can use a filter callback to
+    traverse the hash, modifying whatever data you like (a shallow copy is
+    made before passing the value to the callback).
 
 SEE ALSO
     *   CatalystX::Debug::RequestHeaders
