@@ -6,41 +6,43 @@ use Module::Build 0.3601;
 
 
 my %module_build_args = (
-  'build_requires' => {
-    'Catalyst' => '0',
-    'Catalyst::Controller' => '0',
-    'Catalyst::Log' => '0',
-    'Catalyst::ScriptRunner' => '0',
-    'Catalyst::Test' => '0',
-    'FindBin' => '0',
-    'HTTP::Request::Common' => '0',
-    'Module::Build' => '0.3601',
-    'Moose' => '0',
-    'Test::More' => '0',
-    'Test::Pod' => '1.14',
-    'Test::Pod::Coverage' => '1.04',
-    'Test::WWW::Mechanize::Catalyst' => '0',
-    'ok' => '0'
+  "build_requires" => {
+    "Catalyst" => 0,
+    "Catalyst::Controller" => 0,
+    "Catalyst::Log" => 0,
+    "Catalyst::ScriptRunner" => 0,
+    "Catalyst::Test" => 0,
+    "FindBin" => 0,
+    "HTTP::Request::Common" => 0,
+    "Module::Build" => "0.3601",
+    "Moose" => 0,
+    "Test::More" => 0,
+    "Test::Pod" => "1.14",
+    "Test::Pod::Coverage" => "1.04",
+    "Test::WWW::Mechanize::Catalyst" => 0,
+    "ok" => 0,
+    "strict" => 0,
+    "warnings" => 0
   },
-  'configure_requires' => {
-    'Module::Build' => '0.3601'
+  "configure_requires" => {
+    "Module::Build" => "0.3601"
   },
-  'dist_abstract' => 'Provides configurable filtering of data that is logged to the debug logs (and error screen)',
-  'dist_author' => [
-    'Brian Phillips <bphillips@cpan.org>'
+  "dist_abstract" => "Provides configurable filtering of data that is logged to the debug logs (and error screen)",
+  "dist_author" => [
+    "Brian Phillips <bphillips\@cpan.org>"
   ],
-  'dist_name' => 'CatalystX-DebugFilter',
-  'dist_version' => '0.09',
-  'license' => 'perl',
-  'module_name' => 'CatalystX::DebugFilter',
-  'recommends' => {},
-  'recursive_test_files' => 1,
-  'requires' => {
-    'Moose::Role' => '0',
-    'Scalar::Util' => '0',
-    'namespace::autoclean' => '0'
+  "dist_name" => "CatalystX-DebugFilter",
+  "dist_version" => "0.10",
+  "license" => "perl",
+  "module_name" => "CatalystX::DebugFilter",
+  "recommends" => {},
+  "recursive_test_files" => 1,
+  "requires" => {
+    "Moose::Role" => 0,
+    "Scalar::Util" => 0,
+    "namespace::autoclean" => 0
   },
-  'script_files' => []
+  "script_files" => []
 );
 
 

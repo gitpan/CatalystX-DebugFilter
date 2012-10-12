@@ -1,6 +1,6 @@
 package CatalystX::DebugFilter;
-BEGIN {
-  $CatalystX::DebugFilter::VERSION = '0.09';
+{
+  $CatalystX::DebugFilter::VERSION = '0.10';
 }
 
 # ABSTRACT: Provides configurable filtering of data that is logged to the debug logs (and error screen)
@@ -88,7 +88,7 @@ sub _filter_request_params {
     foreach my $type (@types) {
         my $method = join '_', grep { $_ } $type, 'parameters';
         my $params = $req->$method;
-        next if !%$params;
+        next unless defined $params && ref $params && %$params;
         my $copy = { %$params };
         $is_filtered += _filter_hash_ref( $copy, @filters );
         if($is_filtered){
@@ -167,8 +167,8 @@ sub _filter_session {
 
 1;
 
-
 __END__
+
 =pod
 
 =head1 NAME
@@ -177,7 +177,7 @@ CatalystX::DebugFilter - Provides configurable filtering of data that is logged 
 
 =head1 VERSION
 
-version 0.09
+version 0.10
 
 =head1 SYNOPSIS
 
@@ -323,14 +323,13 @@ made before passing the value to the callback).
 
 =head1 AUTHOR
 
-  Brian Phillips <bphillips@cpan.org>
+Brian Phillips <bphillips@cpan.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-This software is copyright (c) 2011 by Brian Phillips.
+This software is copyright (c) 2012 by Brian Phillips.
 
 This is free software; you can redistribute it and/or modify it under
 the same terms as the Perl 5 programming language system itself.
 
 =cut
-
