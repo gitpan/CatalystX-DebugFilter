@@ -1,6 +1,6 @@
 package CatalystX::DebugFilter;
 {
-  $CatalystX::DebugFilter::VERSION = '0.10';
+  $CatalystX::DebugFilter::VERSION = '0.11';
 }
 
 # ABSTRACT: Provides configurable filtering of data that is logged to the debug logs (and error screen)
@@ -177,7 +177,7 @@ CatalystX::DebugFilter - Provides configurable filtering of data that is logged 
 
 =head1 VERSION
 
-version 0.10
+version 0.11
 
 =head1 SYNOPSIS
 
